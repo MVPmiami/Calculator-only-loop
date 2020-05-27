@@ -6,3 +6,11 @@ for(leftOperand = prompt("Левый операнд"); isNaN(leftOperand);leftOp
     alert("Введите число!");
     leftOperand = prompt("Левый операнд");
 }
+
+do{
+    operator = prompt("Оператор");
+
+    if(operator != "+" && operator != "-" && operator != "*" && operator != "/" && operator != "="){
+        alert("Введите корректный оператор(+, -, *, /)");
+    }
+} while (operator != "=");
