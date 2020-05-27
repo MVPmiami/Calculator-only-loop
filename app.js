@@ -14,3 +14,8 @@ do{
         alert("Введите корректный оператор(+, -, *, /)");
     }
 } while (operator != "=");
+
+rightOperand = prompt("Правый операнд");
+        if(isNaN(rightOperand)){
+            alert("Введите число!");
+            rightOperand = prompt("Правый операнд");
