@@ -50,4 +50,16 @@ do{
         break;
     }
     
+    if(operator == "/"){// ЦИКЛ ДЕЛЕНИЯ
+        rightOperand = prompt("Правый операнд");
+        if(isNaN(rightOperand)){
+            alert("Введите число!");
+            rightOperand = prompt("Правый операнд");
+        }
+        leftOperand = +leftOperand / +rightOperand;
+    }else if(operator == "="){
+        alert(`Result: ${leftOperand}`);
+        break;
+    }
+
 } while (operator != "=");
