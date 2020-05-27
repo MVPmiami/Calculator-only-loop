@@ -13,9 +13,17 @@ do{
     if(operator != "+" && operator != "-" && operator != "*" && operator != "/" && operator != "="){
         alert("Введите корректный оператор(+, -, *, /)");
     }
-} while (operator != "=");
 
-rightOperand = prompt("Правый операнд");
+    if(operator == "+"){// ЦИКЛ СЛОЖЕНИЯ.
+        rightOperand = prompt("Правый операнд");
         if(isNaN(rightOperand)){
             alert("Введите число!");
             rightOperand = prompt("Правый операнд");
+        }
+        leftOperand = +leftOperand + +rightOperand;
+    }else if(operator == "="){
+        alert(`Result: ${leftOperand}`);
+        break;
+    }
+    
+} while (operator != "=");
